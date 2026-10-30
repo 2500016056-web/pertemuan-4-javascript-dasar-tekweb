@@ -1,0 +1,138 @@
+:root {
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+    background: #f4f7fb;
+    font-synthesis: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+}
+
+.calculator {
+    width: min(100%, 400px);
+    padding: 32px;
+    border: 1px solid #e6eaf0;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+h1 {
+    margin: 0;
+    color: #172554;
+    font-size: 1.65rem;
+    text-align: center;
+}
+
+.description {
+    margin: 10px 0 26px;
+    color: #6b7280;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.inputs {
+    display: grid;
+    gap: 16px;
+}
+
+.inputs label {
+    display: grid;
+    gap: 8px;
+    color: #374151;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+    color: #1f2937;
+    font: inherit;
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+input:focus {
+    border-color: #4f75dc;
+    box-shadow: 0 0 0 3px rgba(79, 117, 220, 0.14);
+}
+
+.operation-label {
+    margin: 22px 0 10px;
+    color: #374151;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.operations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.operations button {
+    min-height: 48px;
+    border: 1px solid #dbe3f4;
+    border-radius: 10px;
+    background: #eef3ff;
+    color: #3156b5;
+    cursor: pointer;
+    font: 600 1.4rem Arial, sans-serif;
+    transition: background 150ms ease, color 150ms ease, transform 150ms ease;
+}
+
+.operations button:hover {
+    transform: translateY(-2px);
+    background: #3156b5;
+    color: #fff;
+}
+
+.operations button:focus-visible {
+    outline: 3px solid #a9bdf2;
+    outline-offset: 2px;
+}
+
+.result-box {
+    min-height: 76px;
+    margin-top: 22px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-radius: 10px;
+    background: #f3f6fc;
+}
+
+.result-box span {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.result-box output {
+    overflow-wrap: anywhere;
+    color: #172554;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+@media (max-width: 420px) {
+    .calculator {
+        padding: 26px 20px;
+    }
+}

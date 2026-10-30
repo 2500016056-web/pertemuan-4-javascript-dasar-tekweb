@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f7fb">
+    <title>Kalkulator Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="calculator">
+        <h1>Kalkulator Sederhana</h1>
+        <p class="description">Masukkan dua angka dan pilih operasi.</p>
+
+        <div class="inputs">
+            <label>
+                Angka pertama
+                <input id="angka1" type="number" step="any" placeholder="Masukkan angka" inputmode="decimal">
+            </label>
+            <label>
+                Angka kedua
+                <input id="angka2" type="number" step="any" placeholder="Masukkan angka" inputmode="decimal">
+            </label>
+        </div>
+
+        <p class="operation-label">Operasi</p>
+        <div class="operations" aria-label="Operasi matematika">
+            <button type="button" data-operation="add" aria-label="Penambahan">+</button>
+            <button type="button" data-operation="subtract" aria-label="Pengurangan">−</button>
+            <button type="button" data-operation="multiply" aria-label="Perkalian">×</button>
+            <button type="button" data-operation="divide" aria-label="Pembagian">÷</button>
+        </div>
+
+        <section class="result-box" aria-live="polite" aria-atomic="true">
+            <span>Hasil</span>
+            <output id="hasil">—</output>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
